@@ -14,9 +14,11 @@ import javax.persistence.Id;
  */
 @Entity
 public class AccountEntity {
+
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id;
+
     private String name;
 
     public Integer getId() {
