@@ -13,7 +13,7 @@ import javax.persistence.Id;
  * @since 20/06/2019
  */
 @Entity
-public class AccountEntity {
+public class Account {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
