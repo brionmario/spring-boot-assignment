@@ -1,20 +1,16 @@
 package lk.piumalkulasekara.spring.boot.assignment.controller;
 
-import org.springframework.stereotype.Controller;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
-/**
- * Copyright (c) 2019. Aparecium Labs.  http://www.apareciumlabs.com
- *
- * @author brionsilva
- * @version 1.0
- * @since 19/06/2019
- */
-@Controller
+@RestController
 public class IndexController {
 
-    @RequestMapping("/")
-    String index(){
-        return "index";
+    @RequestMapping(value = "/",method = RequestMethod.GET, produces = {"application/json"})
+    public ResponseEntity<String> index() {
+        return new ResponseEntity<>("{\"message\" : \"Welcome to Spring Boot REST API Assignment!\"}", HttpStatus.OK);
     }
 }
