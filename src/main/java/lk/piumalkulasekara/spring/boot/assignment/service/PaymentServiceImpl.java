@@ -8,6 +8,11 @@ import lk.piumalkulasekara.spring.boot.assignment.repository.PaymentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
+
 @Service
 public class PaymentServiceImpl implements PaymentService{
 
@@ -20,6 +25,22 @@ public class PaymentServiceImpl implements PaymentService{
     }
 
     @Override
+    public Iterable<Payment> filterPaymentsByAccountIdAndDate(Integer accountId, Date startDate, Date endDate) {
+        Iterable<Payment> payments =  paymentRepository.findAll();
+        Iterator<Payment> itr = payments.iterator();
+
+        List<Payment> newPayments = new ArrayList<Payment>();
+
+        while (itr.hasNext()) {
+            if(itr.next().getCreatedAt().compareTo(startDate) >= 0 && itr.next().getCreatedAt().compareTo(endDate) <= 0) {
+                newPayments.add(itr.next());
+            }
+        }
+
+        return newPayments;
+    }
+
+    @Override
     public Payment getPayment(Integer id) {
         return paymentRepository.findById(id)
                 .orElseThrow(() -> new PaymentNotFoundException(id));
@@ -28,10 +49,5 @@ public class PaymentServiceImpl implements PaymentService{
     @Override
     public Payment addPayment(Payment payment) {
         return paymentRepository.save(payment);
-    }
-
-    @Override
-    public Iterable<Payment> getPaymentsByAccountId(Integer accountId) {
-        return null;
     }
 }

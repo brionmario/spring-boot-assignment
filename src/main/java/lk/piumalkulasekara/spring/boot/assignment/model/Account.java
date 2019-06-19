@@ -1,8 +1,10 @@
 package lk.piumalkulasekara.spring.boot.assignment.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import java.util.Set;
 
 @Entity
 @Table(name = "accounts")
@@ -16,6 +18,9 @@ public class Account {
     @NotNull
     @Column(name = "name", unique = true)
     private String name;
+
+    @OneToMany(mappedBy = "account", cascade = CascadeType.ALL)
+    private Set<Payment> payments;
 
     public Integer getId() {
         return id;
@@ -33,4 +38,11 @@ public class Account {
         this.name = name;
     }
 
+    public Set<Payment> getPayments() {
+        return payments;
+    }
+
+    public void setPayments(Set<Payment> payments) {
+        this.payments = payments;
+    }
 }
