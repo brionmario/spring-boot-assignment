@@ -1,18 +1,27 @@
 package lk.piumalkulasekara.spring.boot.assignment.controller;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import lk.piumalkulasekara.spring.boot.assignment.model.Account;
+import lk.piumalkulasekara.spring.boot.assignment.service.AccountService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
-/**
- * Copyright (c) 2019. Aparecium Labs.  http://www.apareciumlabs.com
- *
- * @author brionsilva
- * @version 1.0
- * @since 19/06/2019
- */
-@Controller
+@RestController
 public class RevenueController {
+    @Autowired
+    private AccountService accountService;
 
+    @PostMapping(path="/account")
+    Account addAccount (@RequestBody Account account) {
+        return accountService.addAccount(account);
+    }
+
+    @GetMapping("/account/{id}")
+    Account getAccount(@PathVariable Integer id) {
+        return accountService.getAccount(id);
+    }
+
+    @GetMapping(path="/account")
+    Iterable<Account> getAllAccounts() {
+        return accountService.getAllAccounts();
+    }
 }

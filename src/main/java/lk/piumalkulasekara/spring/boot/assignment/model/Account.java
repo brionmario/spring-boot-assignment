@@ -1,24 +1,20 @@
 package lk.piumalkulasekara.spring.boot.assignment.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
-/**
- * Copyright (c) 2019. Aparecium Labs.  http://www.apareciumlabs.com
- *
- * @author brionsilva
- * @version 1.0
- * @since 20/06/2019
- */
 @Entity
+@Table(name = "accounts")
 public class Account {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
+    @Column(name = "id")
     private Integer id;
 
+    @NotNull
+    @Column(name = "name", unique = true)
     private String name;
 
     public Integer getId() {

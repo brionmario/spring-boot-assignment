@@ -7,22 +7,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(path="/account")
 public class AccountController {
     @Autowired
     private AccountService accountService;
 
-    @PostMapping(path="/")
+    @PostMapping(path="/account")
     Account addAccount (@RequestBody Account account) {
         return accountService.addAccount(account);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/account/{id}")
     Account getAccount(@PathVariable Integer id) {
         return accountService.getAccount(id);
     }
 
-    @GetMapping(path="/")
+    @GetMapping(path="/account")
     Iterable<Account> getAllAccounts() {
         return accountService.getAllAccounts();
     }
