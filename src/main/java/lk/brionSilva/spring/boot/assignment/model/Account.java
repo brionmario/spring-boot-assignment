@@ -1,6 +1,4 @@
-package lk.piumalkulasekara.spring.boot.assignment.model;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
+package lk.brionSilva.spring.boot.assignment.model;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;

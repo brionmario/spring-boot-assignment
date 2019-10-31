@@ -1,8 +1,7 @@
-package lk.piumalkulasekara.spring.boot.assignment.controller;
+package lk.brionSilva.spring.boot.assignment.controller;
 
-import lk.piumalkulasekara.spring.boot.assignment.exception.AccountNotFoundException;
-import lk.piumalkulasekara.spring.boot.assignment.model.Account;
-import lk.piumalkulasekara.spring.boot.assignment.service.AccountService;
+import lk.brionSilva.spring.boot.assignment.model.Account;
+import lk.brionSilva.spring.boot.assignment.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,4 +1,4 @@
-package lk.piumalkulasekara.spring.boot.assignment.exception;
+package lk.brionSilva.spring.boot.assignment.exception;
 
 public class AccountNotFoundException extends RuntimeException {
     public AccountNotFoundException(Integer id) {

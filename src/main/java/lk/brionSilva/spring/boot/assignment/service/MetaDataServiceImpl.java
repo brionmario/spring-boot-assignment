@@ -1,12 +1,11 @@
-package lk.piumalkulasekara.spring.boot.assignment.service;
+package lk.brionSilva.spring.boot.assignment.service;
 
-import lk.piumalkulasekara.spring.boot.assignment.model.Account;
-import lk.piumalkulasekara.spring.boot.assignment.model.Payment;
+import lk.brionSilva.spring.boot.assignment.model.Account;
+import lk.brionSilva.spring.boot.assignment.model.Payment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 

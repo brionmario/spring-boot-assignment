@@ -1,6 +1,6 @@
-package lk.piumalkulasekara.spring.boot.assignment;
+package lk.brionSilva.spring.boot.assignment;
 
-import lk.piumalkulasekara.spring.boot.assignment.service.MetaDataService;
+import lk.brionSilva.spring.boot.assignment.service.MetaDataService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;

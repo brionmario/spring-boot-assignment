@@ -1,4 +1,4 @@
-package lk.piumalkulasekara.spring.boot.assignment.model;
+package lk.brionSilva.spring.boot.assignment.model;
 
 public class Revenue {
     private String account;

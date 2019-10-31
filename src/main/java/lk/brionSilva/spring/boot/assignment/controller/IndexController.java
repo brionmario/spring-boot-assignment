@@ -1,4 +1,4 @@
-package lk.piumalkulasekara.spring.boot.assignment.controller;
+package lk.brionSilva.spring.boot.assignment.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

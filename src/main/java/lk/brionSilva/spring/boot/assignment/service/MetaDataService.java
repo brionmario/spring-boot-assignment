@@ -1,4 +1,4 @@
-package lk.piumalkulasekara.spring.boot.assignment.service;
+package lk.brionSilva.spring.boot.assignment.service;
 
 public interface MetaDataService {
     void addAccountMetaData();
