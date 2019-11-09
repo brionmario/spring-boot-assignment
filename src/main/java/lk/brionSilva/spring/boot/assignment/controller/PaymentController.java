@@ -1,9 +1,9 @@
-package lk.piumalkulasekara.spring.boot.assignment.controller;
+package lk.brionSilva.spring.boot.assignment.controller;
 
-import lk.piumalkulasekara.spring.boot.assignment.model.Account;
-import lk.piumalkulasekara.spring.boot.assignment.model.Payment;
-import lk.piumalkulasekara.spring.boot.assignment.service.AccountService;
-import lk.piumalkulasekara.spring.boot.assignment.service.PaymentService;
+import lk.brionSilva.spring.boot.assignment.model.Account;
+import lk.brionSilva.spring.boot.assignment.model.Payment;
+import lk.brionSilva.spring.boot.assignment.service.AccountService;
+import lk.brionSilva.spring.boot.assignment.service.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,6 +1,6 @@
-package lk.piumalkulasekara.spring.boot.assignment.repository;
+package lk.brionSilva.spring.boot.assignment.repository;
 
-import lk.piumalkulasekara.spring.boot.assignment.model.Account;
+import lk.brionSilva.spring.boot.assignment.model.Account;
 import org.springframework.data.repository.CrudRepository;
 
 /**

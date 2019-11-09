@@ -1,4 +1,4 @@
-package lk.piumalkulasekara.spring.boot.assignment.model;
+package lk.brionSilva.spring.boot.assignment.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.CreationTimestamp;
